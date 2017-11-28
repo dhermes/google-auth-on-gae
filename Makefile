@@ -28,6 +28,7 @@ lib: requirements.txt
 	$(PY27) -m pip install \
 	    --target lib \
 	    --requirement requirements.txt
+	# Remove deps handled by GAE
 	rm -f lib/six.py*
 	rm -fr lib/six-*.dist-info
 
